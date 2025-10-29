@@ -1,7 +1,11 @@
 # Neith - Vespara's almost moon
 
-Neith was a hypothetical moon of Venus that was reported by several astronomers between 1672 and 1770, but is now known not to exist. Sightings were likely caused by optical illusions, stars near Venus, or misidentified objects.
+"Neith was a hypothetical moon of Venus that was reported by several astronomers between 1672 and 1770, but is now known not to exist. Sightings were likely caused by optical illusions, stars near Venus, or misidentified objects."
+
 While prototyping the Internet of Things - I created Neith, an interactive Arduino Prototype controller for the LED light installation [Vespara](https://github.com/ucl-casa-ce/casa0014/tree/main/vespera), using an ultrasonic distance sensor.
+
+![IMG_4952](https://github.com/user-attachments/assets/d4151d42-5490-4b60-978d-1b7a1b888b3a)
+
 
 # Contents of repository
 - Source code for Neith as well as the versions that lead up to its completion.
@@ -12,6 +16,8 @@ While prototyping the Internet of Things - I created Neith, an interactive Ardui
   # What does Neith do?
   
 Neith is a hanging sphere that can be raised or lowered using a pulley and another sphere. Underneath sits an ultrasonic distance sensor that sends out a sound signal, waits for the echo, and measures how long it takes to return to calculate the distance to the ground below. The proximity of Neith to the ground controls the lights on Vespera, the closer to Vespara the warmer the LED colour, closer to the ground the cooler the colour.
+
+![IMG_4954 2](https://github.com/user-attachments/assets/860724d6-1d62-46c5-9e3b-e360fb3568c2)
 
  # What's Neith made from?
  
@@ -42,9 +48,9 @@ https://www.hobbycraft.co.uk/assorted-mache-balls-8-pack/6728611000.html
 
 This system enables the Vespera light installation to respond to movement and proximity using the ultrasonic distance sensor HC-SR04. 
 
-The sensor continuously measures distance at determined intervals and my code translates this data into predetermined RGB values corresponding to chosen distances.
+The sensor continuously measures distances at determined intervals and my code translates this data into predetermined RGB values corresponding to chosen distances.
 
-The RGB values are sent to Vespara via Wifi connecting to MQTT broker mqtt.cetools.org where it's published on a specific channel student/CASA0014/light/19. Vespara also subscribes to this channel, allowing the sharing of data to be wireless.
+The RGB values are sent to Vespara via Wifi connecting to MQTT broker mqtt.cetools.org where it's published on a specific channel in this case student/CASA0014/light/19. Vespara also subscribes to this channel, allowing the sharing of data to be wireless.
 
 The Vespera light, powered by an Arduino MKR1010 is made up of a strip of 72 NeoPixel LEDs.
 
